@@ -9,16 +9,25 @@
     box-sizing: border-box;
 
 }
+
+:root{
+    --backg_dark: url(imagens/rm218-bb-07.jpg);
+    --color-font: white;
+    --backg_light: url(imagens/v960-ning-05.jpg);
+}
+
+
 body{background-color: rgba(32, 1, 53, 0.888);
-    background-image: url(imagens/rm218-bb-07.jpg) ;
+    background-image: var(--backg_dark) ;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 97vh;
 }
 
+
 #container{
-    border: 1px solid red;
+    display: flexbox;
     width: 360px;
     margin: auto;
     
@@ -41,19 +50,58 @@ body{background-color: rgba(32, 1, 53, 0.888);
     width: 112px;
 }
 
+#caixabtn{
+text-align: center;
+}
+
 ul li {
-    padding: 20px;
+    padding: 9px;
     list-style: none;
 }
 
 ul li a {
     
-    background-color:rgba(96, 94, 94, 0.262);
+    background-color:rgba(255, 255, 255, 0.01);
     text-decoration: none;
     justify-content: center;
-    padding: 25px;
+    padding: 16px;
     display: flex;
-    border-radius: 15px;
+    border-radius: 8px;
     border: 1px solid grey;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    transition: background 0.2s;
 
+}
+
+ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+
+    border: 1.5px solid grey;
+}
+
+#socialmedia{
+    justify-content: center;
+    font-size: 25px;
+    padding: 10px;
+    display: flex;
+    gap: 32px;
+    transition: background 0.4s;
+}
+
+
+
+#socialmedia ion-icon:hover{
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.01);
+    color: rgb(0, 0, 0);
+    padding: 6px;
+
+}
+/*COM DISPLAY FLEX A CENTRALIZAÇÃO E COM JUSTIFY-CONTENT */
+
+
+footer{
+    text-align: center;
+    padding: 30px;
 }
